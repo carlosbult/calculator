@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de Figuras</title>
+</head>
+<body>
+    <h1>Calculo de Figuras Geometricas</h1>
+
+    <form action="">
+        <h2>Calculo de Cuadrado</h2>
+        <input type="number" id="inputCuadrado">
+        <label for="inputCuadrado">
+            <input type="button" value="Calcular Area" onclick="calculoAreaCuadro()">
+            <input type="button" value="Calcular Perimetro" onclick="calculoPerimetroCuadro()">
+            <section>
+                <p id='resultadoArea'></p>
+                <p id='resultadoPerimetro'></p>
+            </section>
+        </label>
+    </form>
+    <form action="">
+        <h2>Calculo de Triangulo</h2>
+        <input type="number" id="ladoDerecho">
+        <input type="number" id="ladoIzquierdo">
+        <input type="number" id="base">
+        <label for="inputTriangulo">
+            <input type="button" value="Calcular Area" onclick="calculoAreaTriangulo()">
+            <input type="button" value="Calcular Perimetro" onclick="calculoPerimetroTriangulo()">
+            <section>
+                <p id='resultadoAreaTriangulo'></p>
+                <p id='resultadoPerimetroTriangulo'></p>
+            </section>
+        </label>
+    </form>
+    <form action="">
+        <h2>Calculo de Circulo</h2>
+        <input type="number" id="inputCirculo">
+        <label for="inputCirculo">
+            <input type="button" value="Calcular Circunferencia" onclick="calculoCircunferenciaCirculo()">
+            <input type="button" value="Calcular Area" onclick="calculoAreaCirculo()">
+            <section>
+                <p id='resultadoAreaCirculo'></p>
+            </section>
+        </label>
+    </form>
+    <script src="figuras.js"></script>
+</body>
+</html>
