@@ -1,190 +1,194 @@
 * {
-    padding: 0;
-    margin: 0;
-  }
+  padding: 0;
+  margin: 0;
+}
 
 .firstTHEME {
-    --main-bg: hsl(222, 26%, 31%);
-    --keypad-toggle-bg: hsl(223, 31%, 20%);
-    --screen-bg: hsl(224, 36%, 15%);
-    --reset-key-bg: hsl(225, 21%, 49%);
-    --reset-key-shadow: hsl(224, 28%, 35%);
-    --equal-key-bg: hsl(6, 63%, 50%);
-    --equal-key-shadow: hsl(6, 70%, 34%);
-    --key-bg: hsl(30, 25%, 89%);
-    --key-shadow: hsl(28, 16%, 65%);
-    --second-number: silver;
-    --second-sign: grey;
-    --key-color: hsl(221, 14%, 31%);
-    --reset-color: hsl(0, 0%, 100%);
-    --screen-color: hsl(0, 0%, 100%);
-    --equal-color: hsl(0, 0%, 100%);
-  }
-  
-  .secondTHEME {
-    --main-bg: hsl(0, 0%, 90%);
-    --keypad-toggle-bg: hsl(0, 5%, 81%);
-    --screen-bg: hsl(0, 0%, 93%);
-    --reset-key-bg: hsl(185, 42%, 37%);
-    --reset-key-shadow: hsl(185, 58%, 25%);
-    --equal-key-bg: hsl(25, 98%, 40%);
-    --equal-key-shadow: hsl(25, 99%, 27%);
-    --key-bg: hsl(45, 7%, 89%);
-    --key-shadow: hsl(35, 11%, 61%);
-    --second-number: #878181;
-    --second-sign: #878181;
-    --key-color: hsl(60, 10%, 19%);
-    --reset-color: hsl(0, 0%, 100%);
-    --screen-color: hsl(60, 10%, 19%);
-    --equal-color: hsl(0, 0%, 100%);
-  }
-  
-  .thirdTHEME {
-    --main-bg: hsl(268, 75%, 9%);
-    --keypad-toggle-bg: hsl(268, 71%, 12%);
-    --screen-bg: hsl(268, 71%, 12%);
-    --reset-key-bg: hsl(281, 89%, 26%);
-    --reset-key-shadow: hsl(285, 91%, 52%);
-    --equal-key-bg: hsl(176, 100%, 44%);
-    --equal-key-shadow: hsl(177, 39%, 37%);
-    --key-bg: hsl(268, 47%, 21%);
-    --key-shadow: hsl(290, 70%, 36%);
-    --second-number: hsl(51.6, 47.2%, 38.6%);
-    --second-sign: hsl(52, 100%, 62%);
-    --key-color: hsl(52, 100%, 62%);
-    --reset-color: hsl(0, 0%, 100%);
-    --screen-color: hsl(52, 100%, 62%);
-    --equal-color: hsl(198, 20%, 13%);
-  }
+  --main-bg: hsl(222, 26%, 31%);
+  --keypad-toggle-bg: hsl(223, 31%, 20%);
+  --screen-bg: hsl(224, 36%, 15%);
+  --reset-key-bg: hsl(225, 21%, 49%);
+  --reset-key-shadow: hsl(224, 28%, 35%);
+  --equal-key-bg: hsl(6, 63%, 50%);
+  --equal-key-shadow: hsl(6, 70%, 34%);
+  --key-bg: hsl(30, 25%, 89%);
+  --key-shadow: hsl(28, 16%, 65%);
+  --second-number: silver;
+  --second-sign: grey;
+  --key-color: hsl(221, 14%, 31%);
+  --reset-color: hsl(0, 0%, 100%);
+  --screen-color: hsl(0, 0%, 100%);
+  --equal-color: hsl(0, 0%, 100%);
+}
 
-  body {
-    background-color: var(--main-bg);
-    font-family: "Spartan", sans-serif;
-  }
+.secondTHEME {
+  --main-bg: hsl(0, 0%, 90%);
+  --keypad-toggle-bg: hsl(0, 5%, 81%);
+  --screen-bg: hsl(0, 0%, 93%);
+  --reset-key-bg: hsl(185, 42%, 37%);
+  --reset-key-shadow: hsl(185, 58%, 25%);
+  --equal-key-bg: hsl(25, 98%, 40%);
+  --equal-key-shadow: hsl(25, 99%, 27%);
+  --key-bg: hsl(45, 7%, 89%);
+  --key-shadow: hsl(35, 11%, 61%);
+  --second-number: #878181;
+  --second-sign: #878181;
+  --key-color: hsl(60, 10%, 19%);
+  --reset-color: hsl(0, 0%, 100%);
+  --screen-color: hsl(60, 10%, 19%);
+  --equal-color: hsl(0, 0%, 100%);
+}
 
-  /* Theme Change Section */
+.thirdTHEME {
+  --main-bg: hsl(268, 75%, 9%);
+  --keypad-toggle-bg: hsl(268, 71%, 12%);
+  --screen-bg: hsl(268, 71%, 12%);
+  --reset-key-bg: hsl(281, 89%, 26%);
+  --reset-key-shadow: hsl(285, 91%, 52%);
+  --equal-key-bg: hsl(176, 100%, 44%);
+  --equal-key-shadow: hsl(177, 39%, 37%);
+  --key-bg: hsl(268, 47%, 21%);
+  --key-shadow: hsl(290, 70%, 36%);
+  --second-number: hsl(51.6, 47.2%, 38.6%);
+  --second-sign: hsl(52, 100%, 62%);
+  --key-color: hsl(52, 100%, 62%);
+  --reset-color: hsl(0, 0%, 100%);
+  --screen-color: hsl(52, 100%, 62%);
+  --equal-color: hsl(198, 20%, 13%);
+}
 
-  .theme__section {
-    display: flex;
-    align-items: center;
-    color: var(--screen-color);
-  }
-  
-  .theme-title{
-    margin-right: 15px;
-  }
-  
-  .theme__change {
-    -webkit-appearance: none;
-    width: 50px;
-    background-color: var(--keypad-toggle-bg);
-    border-radius: 15px;
-    padding: 0.3em;
-  }
-  
-  .theme__change::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 15px;
-    height: 15px;
-    background-color: var(--equal-key-bg);
-    border-radius: 100px;
-  }
+body {
+  background-color: var(--main-bg);
+  font-family: "Spartan", sans-serif;
+}
 
-  /* */
+/* Theme Change Section */
 
-  h1 {
-    text-align: center;
-    color: var(--screen-color);
-  }
+.theme__section {
+  display: flex;
+  align-items: center;
+  color: var(--screen-color);
+}
 
-  .square__form, .triangle__form, .circle__form {
-    width: 90vw;
-    margin: 1em auto;
-    border-radius: 10px;
-    background-color: var(--keypad-toggle-bg);
-    padding: 1em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.theme-title {
+  margin-right: 15px;
+}
 
-  .square__form, .triangle__form, .circle__form > h2 {
-    color: var(--screen-color);
-  }
+.theme__change {
+  -webkit-appearance: none;
+  width: 50px;
+  background-color: var(--keypad-toggle-bg);
+  border-radius: 15px;
+  padding: 0.3em;
+}
 
-  .square__form > input {
-    padding: 0.5em;
-    background-color: var(--screen-bg);
-    margin: 1em;
-    border-radius: 1em;
-    border: 0.1px solid var(--reset-key-bg);
-    color: var(--second-number);
-  }
+.theme__change::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  background-color: var(--equal-key-bg);
+  border-radius: 100px;
+}
 
-  .triangle__form > input {
-    padding: 0.5em;
-    background-color: var(--screen-bg);
-    margin: 1em;
-    border-radius: 1em;
-    border: 0.1px solid var(--reset-key-bg);
-    color: var(--second-number);
-  }
+/* */
 
-  .circle__form > input {
-    padding: 0.5em;
-    background-color: var(--screen-bg);
-    margin: 1em;
-    border-radius: 1em;
-    border: 0.1px solid var(--reset-key-bg);
-    color: var(--second-number);
-  }
+h1 {
+  text-align: center;
+  color: var(--screen-color);
+}
 
-  button {
-    color: var(--key-color);
-    background-color: var(--key-bg);
-    padding: 0.5em;
-    border: none;
-    border-radius: 5px;
-    border-bottom: 3px solid var(--key-shadow);
-    font-size: 1em;
-    font-weight: 700;
-  }
+.square__form,
+.triangle__form,
+.circle__form {
+  width: 90vw;
+  max-width: 550px;
+  margin: 1em auto;
+  border-radius: 10px;
+  background-color: var(--keypad-toggle-bg);
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .square__form > label > input {
-    color: var(--key-color);
-    background-color: var(--key-bg);
-    padding: 0.5em;
-    border: none;
-    border-radius: 5px;
-    border-bottom: 3px solid var(--key-shadow);
-    font-size: 1em;
-    font-weight: 700;
-  }
-  .triangle__form > label > input {
-    color: var(--key-color);
-    background-color: var(--key-bg);
-    padding: 0.5em;
-    border: none;
-    border-radius: 5px;
-    border-bottom: 3px solid var(--key-shadow);
-    font-size: 1em;
-    font-weight: 700;
-  }
-  .circle__form > label > input {
-    color: var(--key-color);
-    background-color: var(--key-bg);
-    padding: 0.5em;
-    border: none;
-    border-radius: 5px;
-    border-bottom: 3px solid var(--key-shadow);
-    font-size: 1em;
-    font-weight: 700;
-  }
-  
-  button:active {
-    border: 1px solid var(--key-shadow);
-  }
-  
+.square__form,
+.triangle__form,
+.circle__form > h2 {
+  color: var(--screen-color);
+}
+
+.square__form > input {
+  padding: 0.5em;
+  background-color: var(--screen-bg);
+  margin: 1em;
+  border-radius: 1em;
+  border: 0.1px solid var(--reset-key-bg);
+  color: var(--second-number);
+}
+
+.triangle__form > input {
+  padding: 0.5em;
+  background-color: var(--screen-bg);
+  margin: 1em;
+  border-radius: 1em;
+  border: 0.1px solid var(--reset-key-bg);
+  color: var(--second-number);
+}
+
+.circle__form > input {
+  padding: 0.5em;
+  background-color: var(--screen-bg);
+  margin: 1em;
+  border-radius: 1em;
+  border: 0.1px solid var(--reset-key-bg);
+  color: var(--second-number);
+}
+
+button {
+  color: var(--key-color);
+  background-color: var(--key-bg);
+  padding: 0.5em;
+  border: none;
+  border-radius: 5px;
+  border-bottom: 3px solid var(--key-shadow);
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.square__form > label > input {
+  color: var(--key-color);
+  background-color: var(--key-bg);
+  padding: 0.5em;
+  border: none;
+  border-radius: 5px;
+  border-bottom: 3px solid var(--key-shadow);
+  font-size: 1em;
+  font-weight: 700;
+}
+.triangle__form > label > input {
+  color: var(--key-color);
+  background-color: var(--key-bg);
+  padding: 0.5em;
+  border: none;
+  border-radius: 5px;
+  border-bottom: 3px solid var(--key-shadow);
+  font-size: 1em;
+  font-weight: 700;
+}
+.circle__form > label > input {
+  color: var(--key-color);
+  background-color: var(--key-bg);
+  padding: 0.5em;
+  border: none;
+  border-radius: 5px;
+  border-bottom: 3px solid var(--key-shadow);
+  font-size: 1em;
+  font-weight: 700;
+}
+
+button:active {
+  border: 1px solid var(--key-shadow);
+}
 
 .other__pages {
   text-align: center;

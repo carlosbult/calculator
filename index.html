@@ -12,6 +12,12 @@
 
 <body onload="loadTheme()">
     <main>
+
+        <section class="other__pages">
+            <button onclick="location.href='./public/figures.html'">Calculation of Geometric Figures</button>
+            <button onclick="location.href='./public/percentage.html'">Calculation of Percentages</button>
+        </section>
+
         <section class="header">
             <h1 class="tittle">Calc</h1>
             <div class="theme__section">
@@ -46,11 +52,6 @@
             <button onclick="signKey('*')">*</button>
             <button onclick="reset()" class="reset">RESET</button>
             <button onclick="signKey('=')" class="equal">=</button>
-        </section>
-
-        <section class="other__pages">
-            <button onclick="location.href='./public/figures.html'">Calculation of Geometric Figures</button>
-            <button onclick="location.href='./public/percentage.html'">Calculation of Percentages</button>
         </section>
     </main>
     <script src="./src/index.js"></script>

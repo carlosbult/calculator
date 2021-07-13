@@ -11,11 +11,20 @@
 
 <body onload="loadTheme()">
 
+    <div style="display: flex; justify-content: space-around; padding: 1em 0 1em 0;">
+
+        <section class="other__pages">
+            <button onclick="location.href='../index.html'">Calculator</button>
+            <button onclick="location.href='./percentage.html'">Calculation of Percentages</button>
+        </section>
+
     <div class="theme__section">
         <h5 class="theme-title">THEME</h5>
         <input id="themeToggle" onclick="selectTheme()" onchange="selectTheme()" class="theme__change" type="range"
             min="1" max="3" value="1">
     </div>
+</div>
+
 
     <h1>Calculation of Figures Geometrics</h1>
 
@@ -56,11 +65,6 @@
             <p id='resultadoAreaCirculo'></p>
         </section>
     </form>
-
-    <section class="other__pages">
-        <button onclick="location.href='../index.html'">Calculator</button>
-        <button onclick="location.href='./percentage.html'">Calculation of Percentages</button>
-    </section>
 
     <script src="../src/figures.js"></script>
     <script src="../src/themes.js"></script>

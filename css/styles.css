@@ -67,7 +67,7 @@ main {
   max-width: 550px;
   margin: auto;
   position: relative;
-  top: 50px;
+  top: 25px;
 }
 
 .header {
@@ -88,7 +88,7 @@ main {
   color: var(--screen-color);
 }
 
-.theme-title{
+.theme-title {
   margin-right: 15px;
 }
 
@@ -201,4 +201,5 @@ button:active {
 
 .other__pages > button {
   margin: 0.5em;
+  font-size: 1em;
 }
