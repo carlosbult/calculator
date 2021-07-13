@@ -6,61 +6,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/figures.css">
-    <title>Calculo de Figuras</title>
+    <title>Geometric Figures Calc</title>
 </head>
 
 <body onload="loadTheme()">
 
     <div class="theme__section">
         <h5 class="theme-title">THEME</h5>
-        <input id="themeToggle" onclick="selectTheme()" onchange="selectTheme()" class="theme__change"
-            type="range" min="1" max="3" value="1">
+        <input id="themeToggle" onclick="selectTheme()" onchange="selectTheme()" class="theme__change" type="range"
+            min="1" max="3" value="1">
     </div>
 
-    <h1>Calculo de Figuras Geometricas</h1>
+    <h1>Calculation of Figures Geometrics</h1>
 
-    <form action="">
-        <h2>Calculo de Cuadrado</h2>
+    <form class="square__form">
+        <h2>Square Calculation</h2>
         <input type="number" id="inputCuadrado">
         <label for="inputCuadrado">
             <input type="button" value="Calcular Area" onclick="calculoAreaCuadro()">
             <input type="button" value="Calcular Perimetro" onclick="calculoPerimetroCuadro()">
-            <section>
-                <p id='resultadoArea'></p>
-                <p id='resultadoPerimetro'></p>
-            </section>
         </label>
+        <section class="answer">
+            <p id='resultadoArea'></p>
+        </section>
     </form>
-    <form action="">
-        <h2>Calculo de Triangulo</h2>
+
+    <form class="triangle__form">
+        <h2>Triangle Calculation</h2>
         <input type="number" id="ladoDerecho">
         <input type="number" id="ladoIzquierdo">
         <input type="number" id="base">
         <label for="inputTriangulo">
             <input type="button" value="Calcular Area" onclick="calculoAreaTriangulo()">
             <input type="button" value="Calcular Perimetro" onclick="calculoPerimetroTriangulo()">
-            <section>
-                <p id='resultadoAreaTriangulo'></p>
-                <p id='resultadoPerimetroTriangulo'></p>
-            </section>
         </label>
+        <section class="answer">
+            <p id='resultadoAreaTriangulo'></p>
+        </section>
     </form>
-    <form action="">
-        <h2>Calculo de Circulo</h2>
+
+    <form class="circle__form">
+        <h2>Circle Calculation</h2>
         <input type="number" id="inputCirculo">
         <label for="inputCirculo">
             <input type="button" value="Calcular Circunferencia" onclick="calculoCircunferenciaCirculo()">
             <input type="button" value="Calcular Area" onclick="calculoAreaCirculo()">
-            <section>
-                <p id='resultadoAreaCirculo'></p>
-            </section>
         </label>
+        <section class="answer">
+            <p id='resultadoAreaCirculo'></p>
+        </section>
     </form>
+
     <section class="other__pages">
         <button onclick="location.href='../index.html'">Calculator</button>
         <button onclick="location.href='./percentage.html'">Calculation of Percentages</button>
-        <button onclick="location.href='average.html'">Calculation of Averages</button>
     </section>
+
     <script src="../src/figures.js"></script>
     <script src="../src/themes.js"></script>
 </body>

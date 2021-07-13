@@ -61,3 +61,142 @@
     background-color: var(--main-bg);
     font-family: "Spartan", sans-serif;
   }
+
+  /* Theme Change Section */
+
+  .theme__section {
+    display: flex;
+    align-items: center;
+    color: var(--screen-color);
+  }
+  
+  .theme-title{
+    margin-right: 15px;
+  }
+  
+  .theme__change {
+    -webkit-appearance: none;
+    width: 50px;
+    background-color: var(--keypad-toggle-bg);
+    border-radius: 15px;
+    padding: 0.3em;
+  }
+  
+  .theme__change::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: var(--equal-key-bg);
+    border-radius: 100px;
+  }
+
+  /* */
+
+  h1 {
+    text-align: center;
+    color: var(--screen-color);
+  }
+
+  .square__form, .triangle__form, .circle__form {
+    width: 90vw;
+    margin: 1em auto;
+    border-radius: 10px;
+    background-color: var(--keypad-toggle-bg);
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .square__form, .triangle__form, .circle__form > h2 {
+    color: var(--screen-color);
+  }
+
+  .square__form > input {
+    padding: 0.5em;
+    background-color: var(--screen-bg);
+    margin: 1em;
+    border-radius: 1em;
+    border: 0.1px solid var(--reset-key-bg);
+    color: var(--second-number);
+  }
+
+  .triangle__form > input {
+    padding: 0.5em;
+    background-color: var(--screen-bg);
+    margin: 1em;
+    border-radius: 1em;
+    border: 0.1px solid var(--reset-key-bg);
+    color: var(--second-number);
+  }
+
+  .circle__form > input {
+    padding: 0.5em;
+    background-color: var(--screen-bg);
+    margin: 1em;
+    border-radius: 1em;
+    border: 0.1px solid var(--reset-key-bg);
+    color: var(--second-number);
+  }
+
+  button {
+    color: var(--key-color);
+    background-color: var(--key-bg);
+    padding: 0.5em;
+    border: none;
+    border-radius: 5px;
+    border-bottom: 3px solid var(--key-shadow);
+    font-size: 1em;
+    font-weight: 700;
+  }
+
+  .square__form > label > input {
+    color: var(--key-color);
+    background-color: var(--key-bg);
+    padding: 0.5em;
+    border: none;
+    border-radius: 5px;
+    border-bottom: 3px solid var(--key-shadow);
+    font-size: 1em;
+    font-weight: 700;
+  }
+  .triangle__form > label > input {
+    color: var(--key-color);
+    background-color: var(--key-bg);
+    padding: 0.5em;
+    border: none;
+    border-radius: 5px;
+    border-bottom: 3px solid var(--key-shadow);
+    font-size: 1em;
+    font-weight: 700;
+  }
+  .circle__form > label > input {
+    color: var(--key-color);
+    background-color: var(--key-bg);
+    padding: 0.5em;
+    border: none;
+    border-radius: 5px;
+    border-bottom: 3px solid var(--key-shadow);
+    font-size: 1em;
+    font-weight: 700;
+  }
+  
+  button:active {
+    border: 1px solid var(--key-shadow);
+  }
+  
+
+.other__pages {
+  text-align: center;
+}
+
+.other__pages > button {
+  margin: 0.5em;
+}
+
+.answer {
+  margin: 1em;
+  color: var(--screen-color);
+  font-size: 1em;
+  font-weight: 500;
+}
