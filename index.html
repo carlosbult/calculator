@@ -5,23 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
     <title>Calculadora</title>
 </head>
 
 <body onload="loadTheme()">
     <main>
-
         <section class="header">
             <h1 class="tittle">Calc</h1>
-
             <div class="theme__section">
-                <h5>THEME</h5>
-                <span>1 2 3</span>
-                <div class="input-box">
-                    <input id="themeToggle" onclick="selectTheme()" onchange="selectTheme()" class="theme__change"
-                        type="range" min="1" max="3" value="1">
-                </div>
+                <h5 class="theme-title">THEME</h5>
+                <input id="themeToggle" onclick="selectTheme()" onchange="selectTheme()" class="theme__change"
+                    type="range" min="1" max="3" value="1">
             </div>
         </section>
 
@@ -35,7 +31,7 @@
             <button onclick="numbersKey(7)" id="btn7">7</button>
             <button onclick="numbersKey(8)">8</button>
             <button onclick="numbersKey(9)">9</button>
-            <button onclick="delt()" class="del">DEL</button>
+            <button onclick="delt()" class="del">Delete</button>
             <button onclick="numbersKey(4)">4</button>
             <button onclick="numbersKey(5)">5</button>
             <button onclick="numbersKey(6)">6</button>
@@ -51,8 +47,15 @@
             <button onclick="reset()" class="reset">RESET</button>
             <button onclick="signKey('=')" class="equal">=</button>
         </section>
+
+        <section class="other__pages">
+            <button onclick="location.href='./public/figures.html'">Calculation of Geometric Figures</button>
+            <button onclick="location.href='./public/percentage.html'">Calculation of Percentages</button>
+            <button onclick="location.href='./public/average.html'">Calculation of Averages</button>
+        </section>
     </main>
     <script src="./src/index.js"></script>
+    <script src="./src/themes.js"></script>
 </body>
 
 </html>

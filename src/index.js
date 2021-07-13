@@ -1,42 +1,11 @@
 //Variables
 
-let toggle = document.getElementById("themeToggle");
 let mainNumber = document.getElementById("mainNumber");
 let secondaryNumber = document.getElementById("secondaryNumber");
 let sign = document.getElementById("sign");
 var lastSign = "";
 let btn = document.getElementsByTagName("button");
 let arrayBtn = [];
-
-//Change Theme
-
-function setTheme(themeName) {
-  localStorage.setItem("theme", themeName);
-  document.body.className = themeName;
-}
-
-function loadTheme() {
-  if (localStorage.getItem("theme") === "secondTHEME") {
-    setTheme("secondTHEME");
-    toggle.value = 2;
-  } else if (localStorage.getItem("theme") === "thirdTHEME") {
-    setTheme("thirdTHEME");
-    toggle.value = 3;
-  } else {
-    setTheme("firstTHEME");
-    toggle.value = 1;
-  }
-}
-
-function selectTheme() {
-  if (toggle.value == 1) {
-    setTheme("firstTHEME");
-  } else if (toggle.value == 2) {
-    setTheme("secondTHEME");
-  } else if (toggle.value == 3) {
-    setTheme("thirdTHEME");
-  }
-}
 
 //Push Numbers and Signs Functions
 function equalSign(key) {
@@ -168,17 +137,7 @@ document.addEventListener("keypress", (press) => {
       zeroKey(press.key);
       break;
 
-    case 40:
-    case 41:
-    case 49:
-    case 50:
-    case 51:
-    case 52:
-    case 53:
-    case 54:
-    case 55:
-    case 56:
-    case 57:
+    case 40: case 41: case 49: case 50: case 51: case 52: case 53: case 54: case 55: case 56: case 57:
       numbersKey(press.key);
       break;
 
@@ -186,12 +145,7 @@ document.addEventListener("keypress", (press) => {
       pointKey(press.key);
       break;
 
-    case 43:
-    case 45:
-    case 42:
-    case 47:
-    case 13:
-    case 61:
+    case 43: case 45: case 42: case 47: case 13: case 61:
       equalSign(press.key);
       signKey(sign.textContent);
       break;
@@ -216,7 +170,10 @@ document.addEventListener("keydown", (press) => {
     case 48: case 40: case 41: case 49: case 50: case 51: case 52: case 53: case 54: case 55: case 56: case 57: case 46: case 43: case 45: case 42: case 47: case 13: case 61: case 127: case 96: case 97: case 98: case 99: case 100: case 101: case 102: case 103: case 104: case 105: case 106: case 107: case 109: case 110: case 111: case 187:
       for (var i = 0; i < arrayBtn.length; i++) {
         if (press.key === arrayBtn[i].textContent) {
-          arrayBtn[i].className = "thirdTHEME";
+          arrayBtn[i].style =  'border: 1px solid var(--key-shadow)';
+        }
+        if (press.key === arrayBtn[i].textContent && arrayBtn[i].textContent === '=') {
+          arrayBtn[i].style =  'border: 1px solid var(--equal-key-shadow)';
         }
       }
       break;
@@ -230,7 +187,10 @@ document.addEventListener("keyup", (press) => {
     case 48: case 40: case 41: case 49: case 50: case 51: case 52: case 53: case 54: case 55: case 56: case 57: case 46: case 43: case 45: case 42: case 47: case 13: case 61: case 127: case 96: case 97: case 98: case 99: case 100: case 101: case 102: case 103: case 104: case 105: case 106: case 107: case 109: case 110: case 111: case 187:
       for (var i = 0; i < arrayBtn.length; i++) {
         if (press.key === arrayBtn[i].textContent) {
-          arrayBtn[i].className = "secondTHEME";
+          arrayBtn[i].style =  'border-bottom: 3px solid var(--key-shadow);';
+        }
+        if (press.key === arrayBtn[i].textContent && arrayBtn[i].textContent === '=') {
+          arrayBtn[i].style =  'border-bottom: 3px solid var(--equal-key-shadow)';
         }
       }
       break;
