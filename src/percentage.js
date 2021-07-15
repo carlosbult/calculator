@@ -1,7 +1,51 @@
+let respuesta = document.getElementById("precioFinal");
+let parentElement = document.getElementById("form");
+let cuponButton = document.getElementById("cuponButton");
+let labelDescuento = document.getElementById("labelDescuento");
+let inputDescuento = document.getElementById("descuento");
+let selectInput = document.createElement("select");
+selectInput.setAttribute("id", "cupon");
+selectInput.setAttribute("type", "text");
+selectInput.style =
+  "padding: 0.5em; background-color: var(--screen-bg); margin: 1em; border-radius: 1em; border: 0.1px solid var(--reset-key-bg); color: var(--second-number)";
+let calculo = document.getElementById("calculoDescuento");
+
+let coupons = [
+  {
+    cupon: "DESC%10",
+    descuento: 10,
+  },
+  {
+    cupon: "DESC%20",
+    descuento: 20,
+  },
+  {
+    cupon: "DESC%30",
+    descuento: 30,
+  },
+  {
+    cupon: "DESC%40",
+    descuento: 40,
+  },
+  {
+    cupon: "DESC%50",
+    descuento: 50,
+  },
+  {
+    cupon: "DESC%60",
+    descuento: 60,
+  },
+];
+
+coupons.forEach((coupon) => {
+  let options = document.createElement("option");
+  selectInput.append(options);
+  options.textContent = `${coupon.cupon}`;
+});
+
 function calcularDescuento() {
-  const precio = document.getElementById("precio").value;
+  let precio = document.getElementById("precio").value;
   let descuento = document.getElementById("descuento").value;
-  const respuesta = document.getElementById("precioFinal");
 
   if (precio === "" && descuento === "") {
     respuesta.style = "color: var(--equal-key-bg)";
@@ -20,84 +64,15 @@ function calcularDescuento() {
 }
 
 function utilizarCupon() {
-  const parentElement = document.getElementById("form");
-
-  const cuponButton = document.getElementById("cuponButton");
   cuponButton.value = "Colocar Descuento";
   cuponButton.removeAttribute("onclick");
-
-  const labelDescuento = document.getElementById("labelDescuento");
   labelDescuento.textContent = "Elige un cupon";
-
-  const inputDescuento = document.getElementById("descuento");
-
-  const selectInput = document.createElement("select");
-  selectInput.setAttribute("id", "cupon");
-  selectInput.setAttribute("type", "text");
-  selectInput.style =
-    "padding: 0.5em; background-color: var(--screen-bg); margin: 1em; border-radius: 1em; border: 0.1px solid var(--reset-key-bg); color: var(--second-number)";
-
+  respuesta.textContent = "";
   parentElement.replaceChild(selectInput, inputDescuento);
-
-  const coupons = [
-    {
-      cupon: "DESC%10",
-      descuento: 10,
-    },
-    {
-      cupon: "DESC%20",
-      descuento: 20,
-    },
-    {
-      cupon: "DESC%30",
-      descuento: 30,
-    },
-    {
-      cupon: "DESC%40",
-      descuento: 40,
-    },
-    {
-      cupon: "DESC%50",
-      descuento: 50,
-    },
-    {
-      cupon: "DESC%60",
-      descuento: 60,
-    },
-  ];
-
-  coupons.forEach((coupon) => {
-    let options = document.createElement("option");
-    selectInput.append(options);
-    options.textContent = `${coupon.cupon}`;
-  });
-
-  const calculo = document.getElementById("calculoDescuento");
   calculo.removeAttribute("onclick");
-
-  // ==========================================================//
-
-  cuponButton.addEventListener("click", () => {
-    if (cuponButton.value === "Colocar Descuento") {
-      cuponButton.value = "Utilizar Cupon";
-      cuponButton.setAttribute("onclick", "utilizarCupon()");
-      const parentElement = document.getElementById("form");
-
-      const labelDescuento = document.getElementById("labelDescuento");
-      labelDescuento.textContent = "Descuento a calcular";
-
-      parentElement.replaceChild(inputDescuento, selectInput);
-
-      const calculo = document.getElementById("calculoDescuento");
-      calculo.setAttribute("onclick", "calcularDescuento()");
-    }
-  });
-
-  //============================================================//
 
   calculo.addEventListener("click", () => {
     const precio = document.getElementById("precio").value;
-    const respuesta = document.getElementById("precioFinal");
     const cuponValue = selectInput.value;
 
     const isCuponValido = (coupon) => {
@@ -117,3 +92,14 @@ function utilizarCupon() {
     }
   });
 }
+
+cuponButton.addEventListener("click", () => {
+  if (cuponButton.value === "Colocar Descuento") {
+    cuponButton.value = "Utilizar Cupon";
+    cuponButton.setAttribute("onclick", "utilizarCupon()");
+    labelDescuento.textContent = "Descuento a calcular";
+    parentElement.replaceChild(inputDescuento, selectInput);
+    calculo.setAttribute("onclick", "calcularDescuento()");
+    respuesta.textContent = "";
+  }
+});

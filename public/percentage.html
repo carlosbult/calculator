@@ -10,29 +10,29 @@
 </head>
 
 <body onload="loadTheme()">
-<div style="display: flex; justify-content: space-around; padding: 1em 0 1em 0;">
-    <section class="other__pages">
-        <button onclick="location.href='../index.html'">Calculator</button>
-        <button onclick="location.href='./figures.html'">Calculation of Geometric Figures</button>
-    </section>
+    <div style="display: flex; justify-content: space-around;   padding: 1em 0 1em 0;">
+        <section class="other__pages">
+            <button onclick="location.href='../index.html'">Calculator</button>
+            <button onclick="location.href='./figures.html'">Calculation of Geometric Figures</button>
+        </section>
 
-    <div class="theme__section">
-        <h5 class="theme-title">THEME</h5>
-        <input id="themeToggle" onclick="selectTheme()" onchange="selectTheme()" class="theme__change" type="range"
-            min="1" max="3" value="1">
+        <div class="theme__section">
+            <h5 class="theme-title">THEME</h5>
+            <input id="themeToggle" onclick="selectTheme()" onchange="selectTheme()" class="theme__change" type="range"
+                min="1" max="3" value="1">
+        </div>
     </div>
-</div>
+
     <h1>Precios y Descuentos</h1>
 
     <form id="form">
-            <label for="precio">Precio de tu producto</label>
-            <input type="number" name="" id="precio"    placeholder="Coloca el precio a calcular">
-            <br>
-            <label id='labelDescuento' for="descuento">Descuento a  calcular</label>
-            <input type="number" name="" id="descuento"     placeholder="Coloca el % a descontar">
-            <br>
-        <input class="button" type="button" value="Calcular Descuento" id="calculoDescuento"
-            onclick="calcularDescuento()">
+        <label for="precio">Precio de tu producto</label>
+        <input type="number" name="" id="precio" placeholder="Coloca el precio a calcular">
+        <br>
+        <label id='labelDescuento' for="descuento">Descuento a calcular</label>
+        <input type="number" name="" id="descuento" placeholder="Coloca el % a descontar">
+        <br>
+        <input class="button" type="button" value="Calcular Descuento" id="calculoDescuento" onclick="calcularDescuento()">
         <br>
         <input id="cuponButton" class="button" type="button" value="Utilizar Cupon" onclick="utilizarCupon()">
         <p class="answer" id='precioFinal'></p>
