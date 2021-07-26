@@ -13,19 +13,18 @@
 <body onload="loadTheme()">
     <main class="calculator__main">
 
+        <div class="theme__section">
+            <h5 class="theme-title">THEME</h5>
+            <input id="themeToggle" onclick="selectTheme()" onchange="selectTheme()" class="theme__change" type="range"
+                min="1" max="3" value="1">
+        </div>
+
         <section class="pages__btn">
-            <button onclick="location.href='./public/figures.html'">Calculation of Geometric Figures</button>
-            <button onclick="location.href='./public/percentage.html'">Calculation of Percentages</button>
+            <button onclick="location.href='./public/figures.html'">Calc Geometric Figures</button>
+            <button onclick="location.href='./public/percentage.html'">Calc Percentages</button>
         </section>
 
-        <section class="header">
-            <h1 class="tittle">Calc</h1>
-            <div class="theme__section">
-                <h5 class="theme-title">THEME</h5>
-                <input id="themeToggle" onclick="selectTheme()" onchange="selectTheme()" class="theme__change"
-                    type="range" min="1" max="3" value="1">
-            </div>
-        </section>
+        <h1 class="tittle">Calc</h1>
 
         <section class="screen">
             <p class="secondaryNumber" id='secondaryNumber'></p>
