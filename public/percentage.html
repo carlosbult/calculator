@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/percentage.css">
+    <link rel="stylesheet" href="../css/main.css">
     <title>Porcentajes y Descuentos</title>
 </head>
 
 <body onload="loadTheme()">
     <div style="display: flex; justify-content: space-around;   padding: 1em 0 1em 0;">
-        <section class="other__pages">
+        <section class="pages__btn">
             <button onclick="location.href='../index.html'">Calculator</button>
             <button onclick="location.href='./figures.html'">Calculation of Geometric Figures</button>
         </section>
@@ -32,7 +32,8 @@
         <label id='labelDescuento' for="descuento">Descuento a calcular</label>
         <input type="number" name="" id="descuento" placeholder="Coloca el % a descontar">
         <br>
-        <input class="button" type="button" value="Calcular Descuento" id="calculoDescuento" onclick="calcularDescuento()">
+        <input class="button" type="button" value="Calcular Descuento" id="calculoDescuento"
+            onclick="calcularDescuento()">
         <br>
         <input id="cuponButton" class="button" type="button" value="Utilizar Cupon" onclick="utilizarCupon()">
         <p class="answer" id='precioFinal'></p>
