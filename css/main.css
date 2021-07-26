@@ -52,7 +52,7 @@
   --equal-color: hsl(198, 20%, 13%);
 }
 
-.buttons {
+.calculator__main .btn__section {
   background-color: var(--keypad-toggle-bg);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -62,18 +62,24 @@
   border-radius: 1em;
 }
 
-button {
+button, form .button {
   color: var(--key-color);
   background-color: var(--key-bg);
   padding: 0.5em;
   border: none;
   border-radius: 5px;
   border-bottom: 3px solid var(--key-shadow);
-  font-size: 25px;
   font-weight: 700;
 }
-button:active {
+button:active, form .button:active {
   border: 1px solid var(--key-shadow);
+}
+
+.answer {
+  margin: 1em;
+  color: var(--screen-color);
+  font-size: 1em;
+  font-weight: 500;
 }
 
 .calculator__main {
@@ -176,13 +182,6 @@ button:active {
   font-weight: 700;
 }
 
-.answer {
-  margin: 1em;
-  color: var(--screen-color);
-  font-size: 1em;
-  font-weight: 500;
-}
-
 form {
   display: flex;
   flex-direction: column;
@@ -206,14 +205,6 @@ form input {
   border: 0.1px solid var(--reset-key-bg);
   color: var(--second-number);
 }
-
-.answer {
-  margin: 1em;
-  color: var(--screen-color);
-  font-size: 1em;
-  font-weight: 500;
-}
-
 * {
   padding: 0;
   margin: 0;
